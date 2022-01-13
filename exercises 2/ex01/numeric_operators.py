@@ -1,6 +1,8 @@
-"""This program shows how four numerical operators in Python function. Author: Aidan Glynn."""
+"""
+This program shows how four numerical operators in Python function.
 
-__author__ = "730530326"
+Author: Aidan Glynn
+"""
 
 left_hand_side = int(input("Left hand side: "))
 right_hand_side = int(input("Right hand side: "))

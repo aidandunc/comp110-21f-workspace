@@ -1,6 +1,14 @@
-"""This is the hype machine. Author: AG."""
+# TODO: Write docstring here
+"""
+This is the hype machine.
+
+Author: AG
+"""
+# TODO: Initialize __author__ variable here
 
 __author__ = "730530326"
+
+# TODO: Implement your program logic here
 
 name = str(input("What is your name? "))
 

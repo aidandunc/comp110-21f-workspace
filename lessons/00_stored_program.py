@@ -1,0 +1,6 @@
+"""This is an example of a simple program."""
+
+print("Hello, world.")
+quiz: int = 100
+print(quiz)
+print("Goodbye!")

@@ -1,4 +1,4 @@
-"""Utility functions."""
+"""Utility functions for Project 01."""
 
 from csv import DictReader
 
@@ -76,32 +76,41 @@ def select(input_dictionary: dict[str, list[str]], column_list: list[str]) -> di
     return final_list
 
 
-def concat(table1: dict[str, list[str]], table2: dict[str, list[str]]) -> dict[str, list[str]]:
-    """Produce a new column-based table with two column-based tables combined."""
-    final_concatenated_list: dict[str, list[str]] = {}
-
-    for i in table1:
-        final_concatenated_list[i] = table1[i]
-
-    shared_keys = []
-    table2_specific = []
-
-    for j in table2:
-        if j in final_concatenated_list.keys():
-            shared_keys.append(j)
-        else:
-            table2_specific.append(j)
-        
-    for count in shared_keys:
-        final_concatenated_list[count] += table2[count]
-    for counter in table2_specific:
-        final_concatenated_list[counter] = table2[counter]
-
-    return final_concatenated_list
-
-
 def count(input_list: list[str]) -> dict[str, int]:
     """Returns a dictionary with the counts of unique elements in a list."""
     result_dictionary = {x: input_list.count(x) for x in input_list}
 
     return result_dictionary
+
+
+def data_filter(values1: list[str], values2: list[str], query: str) -> dict[str, int]:
+    value1_list = []
+    value2_list = []
+
+    for i in range(len(values1)): 
+        value1_list.append(values1[i])
+    
+    for i in range(len(values2)):
+        value2_list.append(values2[i])
+
+    second_list = []
+    third_list = []
+    for i in range(len(value1_list)):
+        if value1_list[i] == query:
+            second_list.append(value1_list[i])
+            third_list.append(value2_list[i])
+        
+    return count(third_list)
+
+
+def average_rating_calculator(input_dict: dict[str, int]) -> float:
+    average_list_holder = []
+    total_number_of_items = []
+    for i in input_dict:
+        average_list_holder.append(int(i) * input_dict[i])
+        total_number_of_items.append(input_dict[i])
+
+    return sum(average_list_holder) / sum(total_number_of_items)
+
+
+    

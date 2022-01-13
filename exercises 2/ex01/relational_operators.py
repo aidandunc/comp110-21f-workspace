@@ -1,6 +1,8 @@
-"""This program demonstrates how four relational operators function in Python. Author: AG."""
+"""
+This program demonstrates how four relational operators function in Python.
 
-__author__ = "730530326"
+Author: AG
+"""
 
 left_hand_side = int(input("Left hand side: "))
 right_hand_side = int(input("Right hand side: "))
